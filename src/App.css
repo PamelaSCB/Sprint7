@@ -9,8 +9,8 @@
   background-color: #daf7da;
   display: flex;
   flex-direction: column;
-  justify-content:start;
-  align-items: start;
+  justify-content:flex-start;
+  align-items:flex-start; 
   gap: 2rem;
   border: 0.17rem solid #4444;
 }
