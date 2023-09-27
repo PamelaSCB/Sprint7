@@ -9,8 +9,9 @@ function App() {
     googleAds: false,
   });
 
-  const [numPages, setNumPages] = useState(0);
-  const [numLenguages, setNumLenguages] = useState(0);
+  const [numPages, setNumPages] = useState(1);
+  const [numLenguages, setNumLenguages] = useState(1);
+  const [webPageSelected, setWebPageSelected] = useState(false);
 
   const prices = {
     webPage: 500,
@@ -18,15 +19,16 @@ function App() {
     googleAds: 200,
   };
 
-  const totalPrice =
-    Object.keys(selectedOptions).reduce(
-      (total, option) =>
-        selectedOptions[option] ? total + prices[option] : total,
-      0
-    ) +
-    numPages * numLenguages * 30;
+  let totalPrice = Object.keys(selectedOptions).reduce(
+    (total, option) =>
+      selectedOptions[option] ? total + prices[option] : total,
+    0
+  );
 
-  const [webPageSelected, setWebPageSelected] = useState(false);
+  totalPrice =
+    webPageSelected === true
+      ? totalPrice + numPages * numLenguages * 30
+      : totalPrice;
 
   function handleCheckboxChange(e) {
     const { name, checked } = e.target;
@@ -38,7 +40,7 @@ function App() {
 
   return (
     <div className="body">
-      <h2>¿Qué quieres hacer ?</h2>
+      <h2>¿Qué quieres hacer?</h2>
       <div className="checkbox">
         <label>
           <input
@@ -53,8 +55,8 @@ function App() {
         <Panel
           numPages={numPages}
           numLenguages={numLenguages}
-          setNumLenguages={setNumLenguages}
           setNumPages={setNumPages}
+          setNumLenguages={setNumLenguages}
         />
       )}
       <div>
