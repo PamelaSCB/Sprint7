@@ -1,17 +1,31 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Panel from "./components/Panel";
+import {
+  saveDataToLocalStorage,
+  // getDataFromLocalStorage,
+} from "./useLocalStorage";
 
 function App() {
-  const [selectedOptions, setSelectedOptions] = useState({
-    webPage: false,
-    seo: false,
-    googleAds: false,
-  });
+  const [selectedOptions, setSelectedOptions] = useState(
+    JSON.parse(localStorage.getItem("selectedOptions")) || {
+      webPage: false,
+      seo: false,
+      googleAds: false,
+    }
+  );
 
-  const [numPages, setNumPages] = useState(1);
-  const [numLenguages, setNumLenguages] = useState(1);
-  const [webPageSelected, setWebPageSelected] = useState(false);
+  const [numPages, setNumPages] = useState(
+    parseInt(localStorage.getItem("numPages")) || 0
+  );
+
+  const [numLanguages, setNumLanguages] = useState(
+    parseInt(localStorage.getItem("numLanguages")) || 0
+  );
+
+  const [webPageSelected, setWebPageSelected] = useState(
+    JSON.parse(localStorage.getItem("webPageSelected")) || false
+  );
 
   const prices = {
     webPage: 500,
@@ -26,9 +40,31 @@ function App() {
   );
 
   totalPrice =
-    webPageSelected === true
-      ? totalPrice + numPages * numLenguages * 30
-      : totalPrice;
+    webPageSelected === true ? totalPrice + numPages * 30 : totalPrice;
+
+  totalPrice =
+    webPageSelected === true ? totalPrice + numLanguages * 30 : totalPrice;
+
+  useEffect(() => {
+    const data = {
+      selectedOptions,
+      numPages,
+      numLanguages,
+      webPageSelected,
+    };
+    saveDataToLocalStorage(data);
+   
+  }, [selectedOptions, numPages, numLanguages, webPageSelected]);
+
+  // useEffect(() => {
+  //   const data = getDataFromLocalStorage();
+  //   if (data) {
+  //     setSelectedOptions(data.selectedOptions);
+  //     setNumPages(data.numPages);
+  //     setNumLanguages(data.numLanguages);
+  //     setWebPageSelected(data.webPageSelected);
+  //   }
+  // }, []);
 
   function handleCheckboxChange(e) {
     const { name, checked } = e.target;
@@ -54,9 +90,9 @@ function App() {
       {webPageSelected && (
         <Panel
           numPages={numPages}
-          numLenguages={numLenguages}
+          numLanguages={numLanguages}
           setNumPages={setNumPages}
-          setNumLenguages={setNumLenguages}
+          setNumLanguages={setNumLanguages}
         />
       )}
       <div>

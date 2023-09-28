@@ -1,18 +1,17 @@
 import StyledPanel from "./Panel.styled";
 
-const Panel = ({ numPages, setNumPages, numLenguages, setNumLenguages }) => {
+const Panel = ({ numPages, setNumPages, numLanguages, setNumLanguages }) => {
   const increasePage = () => {
-    if(numPages === 0) setNumPages("")
     setNumPages((count) => count + 1);
   };
   const decreasePage = () => {
-    setNumPages((count) => (count > 1 ? count - 1 : count));
+    setNumPages((count) => (count > 0 ? count - 1 : count));
   };
   const increaseLanguage = () => {
-    setNumLenguages((count) => count + 1);
+    setNumLanguages((count) => count + 1);
   };
   const decreaseLanguage = () => {
-    setNumLenguages((count) => (count > 1 ? count - 1 : count));
+    setNumLanguages((count) => (count > 0 ? count - 1 : count));
   };
 
   return (
@@ -20,14 +19,14 @@ const Panel = ({ numPages, setNumPages, numLenguages, setNumLenguages }) => {
       <div className="adds">
         <label className="labelMenu">
           <p className="textMenu"> Número de paginas </p>
-          <button className="button" min="1" onClick={increasePage}>
+          <button className="button" onClick={increasePage}>
             +
           </button>
           <input
             className="inputMenu"
             id="numPages"
             type="text"
-            min="1"
+            min="0"
             value={numPages}
             onChange={(e) => setNumPages(parseInt(+e.target.value))}
           />
@@ -44,13 +43,13 @@ const Panel = ({ numPages, setNumPages, numLenguages, setNumLenguages }) => {
           </button>
           <input
             className="inputMenu"
-            id="numLenguages"
+            id="numLanguages"
             type="text"
-            min="1"
-            value={numLenguages}
-            onChange={(e) => setNumLenguages(parseInt(+e.target.value))}
+            min="0"
+            value={numLanguages}
+            onChange={(e) => setNumLanguages(parseInt(+e.target.value))}
           />
-          <button className="button" min="1" onClick={decreaseLanguage}>
+          <button className="button" onClick={decreaseLanguage}>
             -
           </button>
         </label>
