@@ -1,15 +1,1 @@
-.body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  height: 60%;
-  max-width: 60rem;
-  margin: 10rem auto;
-  padding: 3rem 2rem;
-  background-color: #daf7da;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem;
-  border: 0.17rem solid #4444;
-}
+

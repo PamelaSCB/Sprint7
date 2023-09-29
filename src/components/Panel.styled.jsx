@@ -8,7 +8,7 @@ const StyledPanel = styled.div`
   justify-content: center;
   gap: 2rem;
   padding: 3rem 2rem;
-  background-color: #b0d9b1;
+  background-color: #c8e4b2;
   border: 0.2rem solid #4444;
 
   .button {
