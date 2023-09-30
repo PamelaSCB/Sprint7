@@ -1,35 +1,33 @@
 import styled from "styled-components";
 
-export const StyledGlobal = styled.div`
-  height: 60rem;
-  max-width: 60rem;
-  margin: 10rem auto;
-  padding: 3rem 2rem;
+const StyledGlobal = styled.div`
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  height: 960px;
+  max-width: 960px;
+  margin: 160px auto;
+  padding: 48px 32px;
   background-color: #c4d7b2;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  gap: 2rem;
-  border-radius: 2rem;
+  gap: 32px;
+  border-radius: 32px;
 
   > h1 {
     width: 90%;
     text-align: center;
-    font-size: 2.5rem;
-  }
-
-  > h2 {
-    width: 90%;
-    text-align: center;
-    font-size: 2.5rem;
+    font-size: 36px;
   }
 
   > div {
     width: 90%;
-    padding: 1rem;
+    padding: 16px;
     display: flex;
     justify-content: start;
     position: relative;
   }
 `;
+
+export default StyledGlobal;

@@ -1,5 +1,5 @@
 import DescriptionApp from "../components/DescriptionApp";
-import { StyledGlobal } from "../styles/GlobalStyles";
+import StyledGlobal from "../styles/GlobalStyles";
 
 const Welcome = () => {
   return (

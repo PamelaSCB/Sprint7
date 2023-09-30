@@ -6,28 +6,28 @@ const StyledDescription = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  gap: 2.5rem;
+  gap: 40px;
   height: 100%;
   position: relative;
 
   > p {
-    font-size: 1.5rem;
+    font-size: 22px;
     font-weight: bold;
     text-align: left;
     line-height: 1.5;
   }
 
   > p:nth-of-type(1) {
-    margin-top: 1rem;
+    margin-top: 16px;
   }
 
   > p:nth-of-type(2) {
-    margin-top: 1.2rem;
-    font-size: 1.3rem;
+    margin-top: 19px;
+    font-size: 19px;
   }
 
   > ul {
-    font-size: 1.2rem;
+    font-size: 17px;
   }
 
   > ul:nth-of-type(1),
@@ -36,8 +36,8 @@ const StyledDescription = styled.div`
     flex-direction: column;
     justify-content: center;
     text-align: start;
-    gap: 0.5rem;
-    padding-left: 2rem;
+    gap: 8px;
+    padding-left: 32px;
   }
 
   > ul:nth-of-type(3) {
@@ -53,13 +53,13 @@ const StyledDescription = styled.div`
 
     .link {
       font-weight: bolder;
-      color: #116a7b;
-      /* color: #116A7B; */
+      color: #618264;
+
       text-decoration: none;
     }
     .link:active {
       color: #618264;
-      transform: translateY(0.3rem);
+      transform: translateY(5px);
     }
   }
 `;

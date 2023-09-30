@@ -1,18 +1,17 @@
 import styled from "styled-components";
 
 const StyledBudget = styled.div`
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   height: 60%;
-  max-width: 60rem;
-  margin: 10rem auto;
-  padding: 3rem 2rem;
+  max-width: 960px;
+  margin: 160px auto;
+  padding: 48px 16px;
   background-color: #c4d7b2;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 32px;
+  border-radius: 32px;
 `;
 
 export default StyledBudget;
