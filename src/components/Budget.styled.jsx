@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledBudget = styled.div`
+export const StyledBudget = styled.div`
   height: 60%;
   max-width: 960px;
   margin: 160px auto;
@@ -12,6 +12,12 @@ const StyledBudget = styled.div`
   align-items: flex-start;
   gap: 32px;
   border-radius: 32px;
-`;
 
-export default StyledBudget;
+  label {
+    display: block;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+  }
+`;

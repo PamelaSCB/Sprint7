@@ -4,6 +4,7 @@ import StyledDescription from "./DescriptionApp.styled";
 const DescriptionApp = () => (
   <div>
     <StyledDescription>
+      <h1>«Bienvenido a Design & Code Consulting.»</h1>
       <p>
         Hemos creado una página de cálculo y registro de presupuesto, donde
         podemos escoger entre las siguientes opciones:

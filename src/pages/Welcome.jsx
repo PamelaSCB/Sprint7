@@ -4,8 +4,9 @@ import StyledGlobal from "../styles/GlobalStyles";
 const Welcome = () => {
   return (
     <StyledGlobal>
-      <h1>«Bienvenido a Design & Code Consulting.»</h1>
+    <div>
       <DescriptionApp />
+    </div>
     </StyledGlobal>
   );
 };

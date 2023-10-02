@@ -20,7 +20,6 @@ const StyledGlobal = styled.div`
     text-align: center;
     font-size: 36px;
   }
-
   > div {
     width: 90%;
     padding: 16px;
@@ -28,6 +27,7 @@ const StyledGlobal = styled.div`
     justify-content: start;
     position: relative;
   }
+ 
 `;
 
 export default StyledGlobal;

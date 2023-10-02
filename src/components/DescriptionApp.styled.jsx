@@ -10,6 +10,12 @@ const StyledDescription = styled.div`
   height: 100%;
   position: relative;
 
+  > h1 {
+    width: 90%;
+    text-align: center;
+    font-size: 36px;
+  }
+
   > p {
     font-size: 22px;
     font-weight: bold;
